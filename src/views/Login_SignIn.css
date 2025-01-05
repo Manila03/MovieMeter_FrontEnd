@@ -1,41 +1,28 @@
+.hidden {
+    visibility: hidden; /* Oculta el componente pero mantiene su espacio en el layout */
+    opacity: 0; /* Hace que desaparezca visualmente */
+    transition: opacity 0.5s ease; /* Transición suave para desvanecerse */
+}
+
 .container {
     display: flex;
-    flex-wrap: wrap; /* Permite que los componentes se apilen en pantallas pequeñas */
-    justify-content: space-between;
+    justify-content: space-between; /* Asegura que Sign In y Log In estén en sus posiciones */
     align-items: flex-start;
-    gap: 0rem;
-    padding: 1rem;
+    gap: 0.5rem; /* Espaciado entre los componentes */
+    padding: 2rem; /* Aumenta el espaciado interno */
+    box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
+    margin: 1rem auto; /* Centra horizontalmente y agrega más separación vertical */
+    width: 52rem; /* Aumenta el ancho máximo */
+    height: 31.25rem;
 }
 
-.left-component,
-.right-component {
-    flex: 1; /* Ambos componentes ocupan el mismo ancho por defecto */
-    min-width: 300px; /* Asegura que no se vuelvan demasiado pequeños */
-    border: 1px solid #ccc;
-    padding: 10rem;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-}
-
-/* Colores para distinguir */
-.left-component {
-    background-color: #f0f8ff; /* Azul claro */
-}
-
-.right-component {
-    background-color: #fff5f5; /* Rosa claro */
-}
-
-/* Responsive: En pantallas más pequeñas, los componentes se apilan */
-@media (max-width: 768px) {
-.container {
-    flex-direction: column;
-    align-items: center; /* Centra los componentes cuando están apilados */
-}
-
-.left-component,
-.right-component {
-    flex: none; /* Restablece flexibilidad para tomar todo el ancho disponible */
-    width: 100%; /* Cada componente ocupa el ancho completo */
-}
+.sign-in,
+.login {
+    flex: 1; /* Ambos componentes ocupan el mismo ancho */
+    text-align: center;
+    transition: opacity 1s ease; /* Transición suave para ocultar/mostrar */
+    height: 32rem; /* Aumenta la altura de los componentes */
+    width: 20rem;
+    border-radius: 0.625rem; /* Bordes redondeados */
+    background-color: white; /* Fondo blanco */
 }
