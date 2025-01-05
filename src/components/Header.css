@@ -1,7 +1,164 @@
-.header-container {
-    display: flex;
-    width: 100%;
+/* Variables CSS para una gestión más fácil de colores y valores */
+:root {
+    --primary-color: #2563eb;
+    --primary-dark: #1e40af;
+    --secondary-color: #f3f4f6;
+    --text-light: #ffffff;
+    --text-dark: #1f2937;
+    --gradient-dark: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+    --gradient-primary: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+/* Estilos del encabezado principal */
+.encabezado-principal {
+    position: fixed;
     top: 0;
     left: 0;
-    color: #d11616
+    width: 100%;
+    background-color: var(--text-light);
+    box-shadow: var(--shadow-md);
+    z-index: 1000;
+}
+
+/* Contenedor superior con gradiente */
+.contenedor-superior {
+    padding: 1.25rem 3rem;
+    background: var(--gradient-dark);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    height: 60px;
+}
+
+/* Estilos mejorados del logo */
+.contenedor-logo {
+    min-width: 5rem;
+    max-width: 5rem;
+    padding: 0.5rem;
+    transition: var(--transition);
+}
+
+.logo-imagen {
+    max-height: 70px;
+    cursor: pointer;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+    transition: var(--transition);
+    border-radius: 15px;
+}
+
+.logo-imagen:hover {
+    transform: scale(1.05);
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3));
+}
+
+.contenedor-busqueda {
+    flex: 1;
+    max-width: 30rem;
+    margin: 0 3rem;
+}
+
+.barra-busqueda {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 0.25rem;
+    transition: var(--transition);
+    min-width: 15rem;
+}
+
+.barra-busqueda:focus-within {
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.3);
+}
+
+.campo-busqueda {
+    width: 100%;
+    padding: 0.875rem 1.25rem;
+    background: rgba(255, 255, 255, 0.95);
+    border: none;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    color: var(--text-dark);
+    transition: var(--transition);
+}
+
+.campo-busqueda::placeholder {
+    color: #9ca3af;
+}
+
+.campo-busqueda:focus {
+    outline: none;
+    background: var(--text-light);
+}
+
+.boton-buscar {
+    background: var(--primary-color);
+    color: var(--text-light);
+    border: none;
+    border-radius: 6px;
+    padding: 0.875rem 1.25rem;
+    margin-left: 0.5rem;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.boton-buscar:hover {
+    background: var(--primary-dark);
+    transform: translateY(-1px);
+}
+
+.icono-buscar {
+    width: 20px;
+    height: 20px;
+    color: var(--text-light);
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+    z-index: 999;
+}
+/* .contenedor-menu {
+    display: flex;
+    justify-content: flex-start; 
+    padding: 0; 
+    margin: 0;
+    width: 100%;}
+ */
+
+ .contenedor-usuario {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    max-width: 20rem;
+    min-width: 15rem;
+}
+
+.boton-usuario, .boton-login {
+    background: none;
+    color: var(--text-light);
+    border: 1px solid var(--text-light);
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    transition: var(--transition);
+}
+
+.boton-usuario:hover, .boton-login:hover {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
 }
