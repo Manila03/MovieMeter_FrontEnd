@@ -1,7 +1,7 @@
 .container {
     display: flex;
-    justify-content: space-between; /* Asegura la separación horizontal entre hijos */
-    align-items: stretch; /* Estira los hijos para que ocupen la misma altura */
+    justify-content: space-between; /* Separa horizontalmente los elementos */
+    align-items: stretch; /* Estira los elementos para que ocupen la misma altura */
     box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
     margin: 1rem auto; /* Centra horizontalmente y agrega separación vertical */
     width: 50rem; /* Ancho del contenedor */
@@ -9,19 +9,45 @@
 }
 
 .imagenes {
-    flex: 0 0 45%; /* Ocupa el 40% del ancho del contenedor */
+    flex: 0 0 45%; /* Ocupa el 45% del ancho del contenedor */
     text-align: center;
     background-color: white;
-    /*border: 2px solid red;*/
     min-height: 35rem; /* Asegura una altura mínima igual al contenedor */
 }
 
+.form-wrapper {
+    display: flex;
+    width: 100%;
+    height: 100%; /* Asegura que el formulario ocupe toda la altura disponible */
+}
+
+
+/* Para mostrar el contenedor cuando tiene la clase 'visible' */
+.form-container.visible {
+    display: block;
+}
+
+/* Clases condicionales para cambiar el orden de los formularios */
+.sign-in-left {
+    width: 55%; /* 55% para SignIn cuando está a la izquierda */
+}
+
+.login-left {
+    width: 55%; /* 55% para Login cuando está a la izquierda */
+}
+
+.sign-in-right {
+    width: 45%; /* 45% para SignIn cuando está a la derecha */
+}
+
+.login-right {
+    width: 45%; /* 45% para Login cuando está a la derecha */
+}
+
+/* Clase adicional para centrar el contenido de los formularios */
 .form-container {
-    flex: 0 0 55%; /* Ocupa el 60% del ancho del contenedor */
-    padding: 1rem; /* Espaciado interno */
-    background-color: #f9f9f9; /* Fondo claro */
-    /*border-left: 2px solid #ddd;  Separador entre imagenes y form-container */
-    display: flex; /* Flexbox interno para alinear el contenido */
-    justify-content: center; /* Centra el formulario horizontalmente */
-    align-items: center; /* Centra el formulario verticalmente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100%; /* Asegura que el formulario tenga la altura completa */
 }
