@@ -4,30 +4,20 @@ import Slider from "../components/Slider";
 
 //{condicion ? si_valor_true : si_valor_false}
 const Login_SignIn = () => {
-  const [signIn, setSignIn] = useState(true); // false: muestra Login, true: muestra SignIn
+  const [signIn, setSignIn] = useState(false); // false: muestra Login, true: muestra SignIn
 
   return (
     <div className="container">
-      {/* 
-      <div className="imagenes">
-        <Imagenes />
+      <div
+        className={`form-container ${signIn ? "sign-in-left" : "login-right"}`}
+      >
+        {signIn ? <SignIn setSignIn={setSignIn} /> : <Login setSignIn={setSignIn} />}
       </div>
-      */}
-        
-      <div className="form-wrapper">
-        {/* Si 'signIn' es verdadero, SignIn estará visible y Login estará oculto */}
-        <div
-          className={`form-container ${signIn ? "sign-in-left" : "sign-in-right"}`}
-        >
-          <SignIn setSignIn={setSignIn} />
-        </div>
-
-        {/* Si 'signIn' es falso, Login estará visible y SignIn estará oculto */}
-        <div
-          className={`form-container ${!signIn ? "login-left" : "login-right"}`}
-        >
-          <Login setSignIn={setSignIn} />
-        </div>
+  
+      <div
+        className={`imagenes ${signIn ? "imagenes-right" : "imagenes-left"}`}
+      >
+        <Imagenes />
       </div>
     </div>
   );

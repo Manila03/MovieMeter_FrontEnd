@@ -13,12 +13,15 @@
     text-align: center;
     background-color: white;
     min-height: 35rem; /* Asegura una altura mínima igual al contenedor */
+    transition: transform 0.5s ease;
 }
 
-.form-wrapper {
-    display: flex;
-    width: 100%;
-    height: 100%; 
+.imagenes-left {
+    order: 1; 
+}
+
+.imagenes-right {
+    order: 2;
 }
 
 .form-container {
@@ -26,24 +29,15 @@
     justify-content: center;
     align-items: center;
     min-height: 100%;
-    border: 1px dashed red
+    border: 1px dashed red;
 }
 
 .sign-in-left {
     width: 55%; 
-}
-
-.login-left {
-    width: 55%; 
-}
-
-.sign-in-right {
-    width: 45%; 
-    visibility: hidden;
+    order: 1; 
 }
 
 .login-right {
-    width: 45%; 
-    visibility: hidden;
+    width: 55%;
+    order: 2;
 }
-
