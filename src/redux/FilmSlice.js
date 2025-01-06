@@ -14,6 +14,18 @@ export const getFilmsByGenre = createAsyncThunk("films/getFilmsByGenre",async (g
     return data;    
 })
 
+
+export const getLastFilms = createAsyncThunk("films/getLastFilms", async (page = 0, size = 16) => {
+    let url;
+    if (page || size) {
+        url = `http://localhost:4002/films/getlastFilms?page=${page}&size=${size}`;
+    } else {
+        url = `http://localhost:4002/films/getLastFilms`;
+    }
+    const {data} = await axios(url);
+    return data;
+})
+
 const filmSlice = createSlice({
     name: "films",
     initialState: {
@@ -63,7 +75,19 @@ const filmSlice = createSlice({
             .addCase(getFilmsByGenre.rejected, (state, action) => {
                 state.loading = false;
                 state.error = action.error.message;
-            });
+            })
+
+            .addCase(getLastFilms.pending, (state) => {
+                state.loading = true;
+            })
+            .addCase(getLastFilms.fulfilled, (state, action) => {
+                state.loading = false;
+                state.items = action.payload;
+            })
+            .addCase(getLastFilms.rejected, (state, action) => {
+                state.loading = false;
+                state.error = action.error.message;
+            })
     },
 
     });
