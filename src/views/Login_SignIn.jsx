@@ -13,30 +13,22 @@ const Login_SignIn = () => {
         <Imagenes />
       </div>
       */}
-
         
-    <div className="form-wrapper">
-        {/* Si 'signIn' es verdadero, SignIn estará en el lado izquierdo */}
-        <div className={`form-container ${signIn ? "sign-in-left" : "sign-in-right"}`}>
+      <div className="form-wrapper">
+        {/* Si 'signIn' es verdadero, SignIn estará visible y Login estará oculto */}
+        <div
+          className={`form-container ${signIn ? "sign-in-left" : "sign-in-right"}`}
+        >
           <SignIn setSignIn={setSignIn} />
         </div>
 
-        {/* Si 'signIn' es falso, Login estará en el lado derecho */}
-        <div className={`form-container ${!signIn ? "login-left" : "login-right"}`}>
+        {/* Si 'signIn' es falso, Login estará visible y SignIn estará oculto */}
+        <div
+          className={`form-container ${!signIn ? "login-left" : "login-right"}`}
+        >
           <Login setSignIn={setSignIn} />
         </div>
       </div>
-      
-
-      {/*
-      <div className="form-container">
-        {signIn ? (
-          <SignIn setSignIn={setSignIn} />
-        ) : (
-          <Login setSignIn={setSignIn} />
-        )}
-      </div>
-      */}
     </div>
   );
 };
