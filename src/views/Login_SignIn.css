@@ -1,30 +1,27 @@
-.hidden {
-    opacity: 0; /* Hazlo invisible */
-    pointer-events: none; /* Desactiva interacciones si es necesario */
-    transition: opacity 0.1s ease; /* Transición suave */
-    display: none;
-}
-
 .container {
     display: flex;
-    justify-content: space-between; /* Asegura que Sign In y Log In estén en sus posiciones */
-    align-items: stretch; /* Estira los hijos para que ocupen toda la altura */
+    justify-content: space-between; /* Asegura la separación horizontal entre hijos */
+    align-items: stretch; /* Estira los hijos para que ocupen la misma altura */
     box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
-    margin: 1rem auto; /* Centra horizontalmente y agrega más separación vertical */
-    width: 50rem; /* Aumenta el ancho máximo */
-    height: 35rem; /* Altura dinámica basada en el contenido */
+    margin: 1rem auto; /* Centra horizontalmente y agrega separación vertical */
+    width: 50rem; /* Ancho del contenedor */
+    height: 35rem; /* Altura fija del contenedor */
 }
 
-
-.sign-in,
-.login, 
 .imagenes {
-    flex: 1; /* Ambos componentes ocupan el mismo ancho */
+    flex: 0 0 45%; /* Ocupa el 40% del ancho del contenedor */
     text-align: center;
-    transition: opacity 1s ease; /* Transición suave para ocultar/mostrar */
-    height: auto; /* Permitir que su altura dependa del contenido */
-    min-height: 35rem; /* Altura mínima para asegurar consistencia */
-    width: 25rem;
     background-color: white;
-    border: 2px solid red
+    /*border: 2px solid red;*/
+    min-height: 35rem; /* Asegura una altura mínima igual al contenedor */
+}
+
+.form-container {
+    flex: 0 0 55%; /* Ocupa el 60% del ancho del contenedor */
+    padding: 1rem; /* Espaciado interno */
+    background-color: #f9f9f9; /* Fondo claro */
+    /*border-left: 2px solid #ddd;  Separador entre imagenes y form-container */
+    display: flex; /* Flexbox interno para alinear el contenido */
+    justify-content: center; /* Centra el formulario horizontalmente */
+    align-items: center; /* Centra el formulario verticalmente */
 }
