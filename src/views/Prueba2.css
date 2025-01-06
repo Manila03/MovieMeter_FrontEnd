@@ -1,0 +1,17 @@
+.container {
+    display: flex;
+    justify-content: space-between; /* Asegura la separación horizontal entre hijos */
+    align-items: stretch; /* Estira los hijos para que ocupen la misma altura */
+    box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
+    margin: 1rem auto; /* Centra horizontalmente y agrega separación vertical */
+    width: 50rem; /* Ancho del contenedor */
+    height: 35rem; /* Altura fija del contenedor */
+}
+
+.imagenes {
+    flex: 0 0 45%; /* Ocupa el 40% del ancho del contenedor */
+    text-align: center;
+    background-color: white;
+    border: 2px solid red;
+    min-height: 35rem; /* Asegura una altura mínima igual al contenedor */
+}

@@ -1,0 +1,24 @@
+.slider-container {
+    width: 300px;
+    height: 200px;
+    overflow: hidden;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    position: relative;
+    margin: auto;
+  }
+  
+  .slider {
+    display: flex;
+  }
+  
+  .slider.transitioning {
+    transition: transform 1s ease-in-out;
+  }
+  
+  .slider img {
+    width: 300px;
+    height: 200px;
+    flex-shrink: 0;
+  }
+  
