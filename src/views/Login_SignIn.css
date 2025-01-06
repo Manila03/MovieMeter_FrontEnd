@@ -1,28 +1,30 @@
 .hidden {
-    visibility: hidden; /* Oculta el componente pero mantiene su espacio en el layout */
-    opacity: 0; /* Hace que desaparezca visualmente */
-    transition: opacity 0.5s ease; /* Transición suave para desvanecerse */
+    opacity: 0; /* Hazlo invisible */
+    pointer-events: none; /* Desactiva interacciones si es necesario */
+    transition: opacity 0.1s ease; /* Transición suave */
+    display: none;
 }
 
 .container {
     display: flex;
     justify-content: space-between; /* Asegura que Sign In y Log In estén en sus posiciones */
-    align-items: flex-start;
-    gap: 0.5rem; /* Espaciado entre los componentes */
-    padding: 2rem; /* Aumenta el espaciado interno */
+    align-items: stretch; /* Estira los hijos para que ocupen toda la altura */
     box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
     margin: 1rem auto; /* Centra horizontalmente y agrega más separación vertical */
-    width: 52rem; /* Aumenta el ancho máximo */
-    height: 31.25rem;
+    width: 50rem; /* Aumenta el ancho máximo */
+    height: 35rem; /* Altura dinámica basada en el contenido */
 }
 
+
 .sign-in,
-.login {
+.login, 
+.imagenes {
     flex: 1; /* Ambos componentes ocupan el mismo ancho */
     text-align: center;
     transition: opacity 1s ease; /* Transición suave para ocultar/mostrar */
-    height: 32rem; /* Aumenta la altura de los componentes */
-    width: 20rem;
-    border-radius: 0.625rem; /* Bordes redondeados */
-    background-color: white; /* Fondo blanco */
+    height: auto; /* Permitir que su altura dependa del contenido */
+    min-height: 35rem; /* Altura mínima para asegurar consistencia */
+    width: 25rem;
+    background-color: white;
+    border: 2px solid red
 }
