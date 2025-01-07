@@ -1,0 +1,85 @@
+/* LatestReleases.css */
+.carousel {
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.carousel-content {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    min-width: 100%;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.carousel-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.carousel-item h3 {
+    margin: 0;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.carousel-button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.carousel-button.prev {
+    left: 10px;
+}
+
+.carousel-button.next {
+    right: 10px;
+}
+
+/* Active item style */
+.carousel-item.active img {
+    border: 3px solid #007BFF;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .carousel {
+        width: 100%;
+    }
+
+    .carousel-item h3 {
+        font-size: 1em;
+    }
+
+    .carousel-button {
+        width: 30px;
+        height: 30px;
+    }
+}

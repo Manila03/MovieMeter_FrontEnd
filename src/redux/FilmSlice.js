@@ -3,26 +3,35 @@ import axios from "axios";
 import axiosInstance from "./axiosInstance";
 
 // export const apiMethod ...
-export const getFilmsByGenre = createAsyncThunk("films/getFilmsByGenre",async (genre, page = 0, size = 30) => {
+
+
+export const getFilmsByGenre = createAsyncThunk("films/getFilmsByGenre",async (params = {}) => {
+    const { page = 0, size} = params;
     let url;
     if (page || size) {
         url = `http://localhost:4002/films/category/name/${genre}?page=${page}&size=${size}`;
     } else {
         url = `http://localhost:4002/films/category/name/${genre}`
     }
+    
     const {data} = await axios(url);
-    return data;    
+    return data;
 })
 
 
-export const getLastFilms = createAsyncThunk("films/getLastFilms", async (page = 0, size = 16) => {
+export const getLastFilms = createAsyncThunk("films/getLastFilms", async (params = {}) => {
+    const { page = 0, size} = params;
     let url;
     if (page || size) {
-        url = `http://localhost:4002/films/getlastFilms?page=${page}&size=${size}`;
+        url = `http://localhost:4002/films/getLastFilms?page=${page}&size=${size}`;
+        console.log("page", page, "size", size);
     } else {
         url = `http://localhost:4002/films/getLastFilms`;
+        console.log("ni page ni size tienen valores");
     }
+    console.log(url);
     const {data} = await axios(url);
+    console.log(data);
     return data;
 })
 
@@ -59,7 +68,7 @@ const filmSlice = createSlice({
         },
         loading: false,
         error: null,
-        book: null,
+        film: null,
     },
     reducers: {},
 
@@ -67,6 +76,7 @@ const filmSlice = createSlice({
         builder
             .addCase(getFilmsByGenre.pending, (state) => {
                 state.loading = true;
+                state.error = null;
             })
             .addCase(getFilmsByGenre.fulfilled, (state, action) => {
                 state.loading = false;
@@ -79,6 +89,7 @@ const filmSlice = createSlice({
 
             .addCase(getLastFilms.pending, (state) => {
                 state.loading = true;
+                state.error = null;
             })
             .addCase(getLastFilms.fulfilled, (state, action) => {
                 state.loading = false;
