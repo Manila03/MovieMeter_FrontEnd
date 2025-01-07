@@ -15,7 +15,6 @@
     text-align: center;
     background-color: white;
     min-height: 35rem; /* Asegura una altura mínima igual al contenedor */
-    transition: transform 0.5s ease;
 }
 
 .imagenes-left {
@@ -83,6 +82,7 @@
     border: 1px solid #ccc;
     border-radius: 5px;
     box-sizing: border-box; /* Incluye el padding en el ancho total */
+    animation: none;
 }
 
 .boton-iniciar{
@@ -100,6 +100,6 @@
     background-color: #45a049;
 }
 
-.btn-irASignIn{
-
+.boton-irASignIn{
+    background-color: #45a049;
 }
