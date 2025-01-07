@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Varela+Round&display=swap');
 
 .container {
     display: flex;
@@ -28,7 +28,7 @@
 
 .form-container {
     display: flex;
-    justify-content: center; /* x */
+    justify-content: first baseline; /* x */
     align-items:first baseline; /* y */
     min-height: 100%;
 }
@@ -44,7 +44,10 @@
 }
 
 .login-container {
-
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 2rem;
 }
 
 .titulo-login-signIn {
@@ -53,5 +56,50 @@
 }
 
 .input-group {
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start; 
+    font-family: "Varela Round", serif;
+}
+
+.label-email{
+    font-size: 1rem; 
+    margin-bottom: 0.5rem;
+}
+
+
+.label-password {
+    font-size: 1rem; 
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.input-email,
+.input-password {
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    max-width: 400px; /* Limita el ancho máximo */
+    padding: 10px; /* Añade espacio interno */
+    font-size: 1rem; /* Ajusta el tamaño del texto */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Incluye el padding en el ancho total */
+}
+
+.boton-iniciar{
+    margin-top: 1rem;
+    background-color: #272030; /* Color verde */
+    color: #e3ebf2;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.boton-iniciar:hover{
+    background-color: #45a049;
+}
+
+.btn-irASignIn{
 
 }

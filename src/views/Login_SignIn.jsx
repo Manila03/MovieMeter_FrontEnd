@@ -27,30 +27,37 @@ const Login_SignIn = () => {
       <h2 className="titulo-login-signIn">Login</h2>
       <form onSubmit={handleSubmit}>
         <div className="input-group">
-          <label htmlFor="email">Correo electrónico</label>
+          <label htmlFor="email" className="label-email">Correo electrónico</label>
           <input
             type="email"
             id="email"
+            className="input-email"
+            placeholder="Tu correo electrónico"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
         </div>
 
         <div className="input-group">
-          <label htmlFor="password">Contraseña</label>
+          <label htmlFor="password" className="label-password">Contraseña</label>
           <input
             type="password"
             id="password"
+            className="input-password"
+            placeholder="Tu contraseña"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
         </div>
 
-        <button type="submit">Iniciar sesión</button>
+        <button type="submit" className="boton-iniciar">
+          Iniciar sesión
+        </button>
       </form>
-      <button onClick={() => setSignIn(true)}>Ir a Sign In</button>
+      <button onClick={() => setSignIn(true)} className="boton-irASignIn">
+        Ir a Sign In
+      </button>
     </div>
-
   );
   
   const Imagenes = () => (
