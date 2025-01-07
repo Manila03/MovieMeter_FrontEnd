@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
 .container {
     display: flex;
     justify-content: space-between; /* Separa horizontalmente los elementos */
@@ -26,10 +28,9 @@
 
 .form-container {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: center; /* x */
+    align-items:first baseline; /* y */
     min-height: 100%;
-    border: 1px dashed red;
 }
 
 .sign-in-left {
@@ -40,4 +41,17 @@
 .login-right {
     width: 55%;
     order: 2;
+}
+
+.login-container {
+
+}
+
+.titulo-login-signIn {
+    font-family: "Outfit", serif;
+    font-size: 2rem;
+}
+
+.input-group {
+
 }
