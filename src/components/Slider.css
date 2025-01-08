@@ -1,0 +1,21 @@
+.slider-container {
+    width: 22.5rem;
+    height: 35rem;
+    overflow: hidden;
+    position: relative;
+    margin: auto;
+}
+
+.slider {
+display: flex;
+}
+
+.slider.transitioning {
+transition: transform 1s ease-in-out;
+}
+
+.slider img {
+width: 22.5rem;
+height: 35rem;
+flex-shrink: 0;
+}

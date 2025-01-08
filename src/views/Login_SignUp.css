@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Varela+Round&display=swap');
+
+.container {
+    display: flex;
+    justify-content: space-between; /* Separa horizontalmente los elementos */
+    align-items: stretch; /* Estira los elementos para que ocupen la misma altura */
+    box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
+    margin: 1rem auto; /* Centra horizontalmente y agrega separación vertical */
+    width: 50rem; /* Ancho del contenedor */
+    height: 35rem; /* Altura fija del contenedor */
+}
+
+.imagenes {
+    flex: 0 0 45%; /* Ocupa el 45% del ancho del contenedor */
+    text-align: center;
+    background-color: white;
+    min-height: 35rem; /* Asegura una altura mínima igual al contenedor */
+}
+
+.imagenes-left {
+    order: 1; 
+}
+
+.imagenes-right {
+    order: 2;
+}
+
+.form-container {
+    display: flex;
+    justify-content: first baseline; /* x */
+    align-items:first baseline; /* y */
+    min-height: 100%;
+    /*border: 2px dashed blue*/
+}
+
+.sign-up-left {
+    width: 55%; 
+    order: 1; 
+}
+
+.login-right {
+    width: 55%;
+    order: 2;
+}
+
+.loginYSignUp-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 2rem;
+    min-height: 100%;
+    min-width: 25.5rem;
+    /*border: 2px dashed red*/
+}
+
+.titulo-login-signUp {
+    font-family: "Outfit", serif;
+    font-size: 2rem;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start; 
+    font-family: "Varela Round", serif;
+}
+
+.label-email{
+    margin-top: 2rem;
+    font-size: 1rem; 
+    margin-bottom: 0.5rem;
+}
+
+.label-password {
+    font-size: 1rem; 
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.label-userName{
+    font-size: 1rem; 
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.input-email,
+.input-password,
+.input-userName {
+    width: 22rem; /* Ocupa todo el ancho del contenedor */
+    padding: 10px; /* Añade espacio interno */
+    font-size: 1rem; /* Ajusta el tamaño del texto */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Incluye el padding en el ancho total */
+}
+
+.boton-iniciar{
+    width: 22rem; 
+    margin-top: 1rem;
+    background-color: #272030; 
+    color: #e3ebf2;
+    padding: 0.75rem;
+    font-size: 1.25rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.boton-registrarse{
+    width: 22rem; 
+    margin-top: 1.75rem;
+    background-color: #272030; 
+    color: #e3ebf2;
+    padding: 0.75rem;
+    font-size: 1.25rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.boton-iniciar:hover,
+.boton-registrarse:hover{
+    background-color: #45a049;
+}
+
+.boton-irASignUp{
+    background-color: #45a049;
+}
+
+.recordarme-container {
+    margin-top: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; 
+}
+
+.recordarme-checkbox {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.checkbox {
+    width: 18px;
+    height: 18px;
+    border: 1.5px solid #ccc;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 8px;
+    transition: all 0.3s ease;
+}
+
+.checkbox.checked {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.tick {
+    color: #fff;
+    font-size: 14px;
+}
+
+.recordarme-text {
+    font-size: 14px;
+    color: #333;
+}
+
+.forgot-password-link {
+    margin-left: 4.25rem;
+    color: #007bff;
+    text-decoration: none;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.forgot-password-link:hover {
+    text-decoration: underline;
+}
+
+.signUp-container{
+    margin-top: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.login-container{
+    margin-top: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.registrarse-link{
+    margin-left: 0.5rem;
+    cursor: pointer;
+}
+
+.nuevo-usuario-text{
+    font-size: 14px;
+    color: #333;
+}
