@@ -43,7 +43,7 @@
     order: 2;
 }
 
-.login-container {
+.loginYSignIn-container {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -77,8 +77,15 @@
     margin-bottom: 0.5rem;
 }
 
+.label-userName{
+    font-size: 1rem; 
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+}
+
 .input-email,
-.input-password {
+.input-password,
+.input-userName {
     width: 22rem; /* Ocupa todo el ancho del contenedor */
     padding: 10px; /* Añade espacio interno */
     font-size: 1rem; /* Ajusta el tamaño del texto */
@@ -88,7 +95,7 @@
 }
 
 .boton-iniciar{
-    width: 22rem; /* Ocupa todo el ancho del contenedor */
+    width: 22rem; 
     margin-top: 1rem;
     background-color: #272030; 
     color: #e3ebf2;
@@ -99,7 +106,20 @@
     cursor: pointer;
 }
 
-.boton-iniciar:hover{
+.boton-registrarse{
+    width: 22rem; 
+    margin-top: 1.75rem;
+    background-color: #272030; 
+    color: #e3ebf2;
+    padding: 0.75rem;
+    font-size: 1.25rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.boton-iniciar:hover,
+.boton-registrarse:hover{
     background-color: #45a049;
 }
 
@@ -161,6 +181,13 @@
 
 .signIn-container{
     margin-top: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.login-container{
+    margin-top: 0.5rem;
     display: flex;
     align-items: center;
     justify-content: flex-start;

@@ -15,8 +15,8 @@ const Login = ({ setSignIn }) => {
     };
 
     return (
-        <div className="login-container">
-        <h2 className="titulo-login-signIn">Login</h2>
+        <div className="loginYSignIn-container">
+        <h2 className="titulo-login-signIn">INICIAR SESIÓN</h2>
         <form onSubmit={handleSubmit}>
             <div className="input-group">
             <label htmlFor="email" className="label-email">
@@ -63,6 +63,7 @@ const Login = ({ setSignIn }) => {
             Iniciar sesión
             </button>
         </form>
+        
 
         <div className="signIn-container">
             <p className="nuevo-usuario-text">¿Nuevo usuario?</p>
