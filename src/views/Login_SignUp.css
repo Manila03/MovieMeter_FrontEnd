@@ -8,6 +8,7 @@
     margin: 1rem auto; /* Centra horizontalmente y agrega separación vertical */
     width: 50rem; /* Ancho del contenedor */
     height: 35rem; /* Altura fija del contenedor */
+    background-color: #ffffff;
 }
 
 .imagenes {
@@ -56,6 +57,7 @@
 .titulo-login-signUp {
     font-family: "Outfit", serif;
     font-size: 2rem;
+    color: #272030
 }
 
 .input-group {
@@ -97,8 +99,8 @@
 .boton-iniciar{
     width: 22rem; 
     margin-top: 1rem;
-    background-color: #272030; 
-    color: #e3ebf2;
+    background-color: #15326a; 
+    color: #ffffff;
     padding: 0.75rem;
     font-size: 1.25rem;
     border: none;
@@ -109,18 +111,18 @@
 .boton-registrarse{
     width: 22rem; 
     margin-top: 1.75rem;
-    background-color: #272030; 
-    color: #e3ebf2;
+    background-color: #15326a; 
+    color: #ffffff;
     padding: 0.75rem;
     font-size: 1.25rem;
     border: none;
     border-radius: 5px;
-    cursor: pointer;
+    cursor: pointer; 
 }
 
 .boton-iniciar:hover,
 .boton-registrarse:hover{
-    background-color: #45a049;
+    box-shadow: 0 6px 10px rgba(21, 50, 106, 0.5);
 }
 
 .boton-irASignUp{
@@ -153,8 +155,8 @@
 }
 
 .checkbox.checked {
-    background-color: #007bff;
-    border-color: #007bff;
+    background-color: #04a7ea;
+    border-color: #04a7ea;
 }
 
 .tick {
@@ -169,7 +171,7 @@
 
 .forgot-password-link {
     margin-left: 4.25rem;
-    color: #007bff;
+    color: #04a7ea;
     text-decoration: none;
     font-size: 14px;
     cursor: pointer;
@@ -196,6 +198,11 @@
 .registrarse-link{
     margin-left: 0.5rem;
     cursor: pointer;
+    color: #04a7ea;
+}
+
+.registrarse-link:hover {
+    text-decoration: underline;
 }
 
 .nuevo-usuario-text{
