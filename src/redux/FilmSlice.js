@@ -4,6 +4,19 @@ import axiosInstance from "./axiosInstance";
 
 // export const apiMethod ...
 
+export const getAllFilms = createAsyncThunk("films/getAllFilms", async (params = {}) => {
+    
+    const { page = 0, size} = params;
+    let url;
+    if (page || size) {
+        url = `http://localhost:4002/films/AllFilms?page=${page}&size=${size}`;
+    } else {
+        url = `http://localhost:4002/films/AllFilms`
+    }
+    const {data} = await axios(url);
+    return data;
+}
+)
 
 export const getFilmsByGenre = createAsyncThunk("films/getFilmsByGenre",async (params = {}) => {
     const { page = 0, size} = params;
@@ -13,7 +26,7 @@ export const getFilmsByGenre = createAsyncThunk("films/getFilmsByGenre",async (p
     } else {
         url = `http://localhost:4002/films/category/name/${genre}`
     }
-    
+    console.log(url);
     const {data} = await axios(url);
     return data;
 })
@@ -96,6 +109,19 @@ const filmSlice = createSlice({
                 state.items = action.payload;
             })
             .addCase(getLastFilms.rejected, (state, action) => {
+                state.loading = false;
+                state.error = action.error.message;
+            })
+
+            .addCase(getAllFilms.pending, (state) => {
+                state.loading = true;
+                state.error = null;
+            })
+            .addCase(getAllFilms.fulfilled, (state, action) => {
+                state.loading = false;
+                state.items = action.payload;
+            })
+            .addCase(getAllFilms.rejected, (state, action) => {
                 state.loading = false;
                 state.error = action.error.message;
             })

@@ -4,6 +4,7 @@ const Login = ({ setSignUp }) => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [isChecked, setIsChecked] = useState(false);
+    const [error, setError] = useState(""); // Estado para el mensaje de error
 
     const handleCheckboxToggle = () => {
         setIsChecked(!isChecked);
@@ -11,7 +12,15 @@ const Login = ({ setSignUp }) => {
 
     const handleSubmit = (e) => {
         e.preventDefault(); // Evita que el formulario recargue la página
-        console.log("Email:", email, "Password:", password);
+
+        // Simular validación de contraseña
+        const correctPassword = "123456"; // Contraseña correcta para esta simulación
+        if (password !== correctPassword) {
+            setError("Contraseña incorrecta");
+        } else {
+            setError(""); // Limpia el error si la contraseña es correcta
+            console.log("Email:", email, "Password:", password);
+        }
     };
 
     return (
@@ -45,6 +54,9 @@ const Login = ({ setSignUp }) => {
                 onChange={(e) => setPassword(e.target.value)}
                 required
             />
+            <div className="error-message-container">
+                    <p className="error-message">{error}</p>
+            </div>
             </div>
 
             <div className="recordarme-container">

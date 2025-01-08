@@ -209,3 +209,19 @@
     font-size: 14px;
     color: #333;
 }
+
+.error-message-container {
+    height: 1rem; 
+    display: flex;
+    align-items: center; 
+}
+
+.error-message {
+    color: red;
+    font-size: 0.875rem;
+    visibility: hidden; 
+}
+
+.error-message-container p:not(:empty) {
+    visibility: visible; 
+}
