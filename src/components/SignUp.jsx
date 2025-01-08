@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const SignIn = ({ setSignIn }) => {
+const SignUp = ({ setSignUp }) => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [userName, setUserName] = useState("");
@@ -13,8 +13,8 @@ const SignIn = ({ setSignIn }) => {
     };
 
     return (
-        <div className="loginYSignIn-container">
-            <h2 className="titulo-login-signIn">REGISTRARSE</h2>
+        <div className="loginYSignUp-container">
+            <h2 className="titulo-login-signUp">REGISTRARSE</h2>
             <form onSubmit={handleSubmit}>
                 <div className="input-group">
                     <label htmlFor="email" className="label-email">
@@ -66,7 +66,7 @@ const SignIn = ({ setSignIn }) => {
             
             <div className="login-container">
                 <p className="nuevo-usuario-text">¿Ya tienes una cuenta?</p>
-                <a className="registrarse-link" onClick={() => setSignIn(false)}>
+                <a className="registrarse-link" onClick={() => setSignUp(false)}>
                     Iniciar sesión
                 </a>
             </div>
@@ -75,4 +75,4 @@ const SignIn = ({ setSignIn }) => {
     );
 };
 
-export default SignIn;
+export default SignUp;

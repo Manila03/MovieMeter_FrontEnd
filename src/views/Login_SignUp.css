@@ -33,7 +33,7 @@
     /*border: 2px dashed blue*/
 }
 
-.sign-in-left {
+.sign-up-left {
     width: 55%; 
     order: 1; 
 }
@@ -43,7 +43,7 @@
     order: 2;
 }
 
-.loginYSignIn-container {
+.loginYSignUp-container {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -53,7 +53,7 @@
     /*border: 2px dashed red*/
 }
 
-.titulo-login-signIn {
+.titulo-login-signUp {
     font-family: "Outfit", serif;
     font-size: 2rem;
 }
@@ -123,7 +123,7 @@
     background-color: #45a049;
 }
 
-.boton-irASignIn{
+.boton-irASignUp{
     background-color: #45a049;
 }
 
@@ -179,7 +179,7 @@
     text-decoration: underline;
 }
 
-.signIn-container{
+.signUp-container{
     margin-top: 3rem;
     display: flex;
     align-items: center;

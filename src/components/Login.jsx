@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const Login = ({ setSignIn }) => {
+const Login = ({ setSignUp }) => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [isChecked, setIsChecked] = useState(false);
@@ -15,8 +15,8 @@ const Login = ({ setSignIn }) => {
     };
 
     return (
-        <div className="loginYSignIn-container">
-        <h2 className="titulo-login-signIn">INICIAR SESIÓN</h2>
+        <div className="loginYSignUp-container">
+        <h2 className="titulo-login-signUp">INICIAR SESIÓN</h2>
         <form onSubmit={handleSubmit}>
             <div className="input-group">
             <label htmlFor="email" className="label-email">
@@ -65,9 +65,9 @@ const Login = ({ setSignIn }) => {
         </form>
         
 
-        <div className="signIn-container">
+        <div className="signUp-container">
             <p className="nuevo-usuario-text">¿Nuevo usuario?</p>
-            <a className="registrarse-link" onClick={() => setSignIn(true)}>
+            <a className="registrarse-link" onClick={() => setSignUp(true)}>
                 Registrarse
             </a>
         </div>
