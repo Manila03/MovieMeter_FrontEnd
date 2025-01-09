@@ -1,36 +1,49 @@
-/* LatestReleases.css */
 .carousel {
-    position: relative;
-    width: 80%;
-    margin: 0 auto;
+    position:relative;
+    /* flex-direction: row; */
+    top: 5rem;
+    /* gap: 5%; */
+    /* align-items: flex-start; */
+    /* margin: 8% -3%; */
     overflow: hidden;
     border: 2px solid #ccc;
     border-radius: 8px;
-    background-color: #f9f9f9;
+    background-color: #e1e0e0;
+    width:100%;
+    height: 60%;
 }
 
+
 .carousel-content {
-    display: flex;
+    position: relative;
     transition: transform 0.5s ease-in-out;
 }
 
-.carousel-item {
-    min-width: 100%;
-    text-align: center;
-    padding: 20px;
+.carousel-group {
+    display: flex;
+    width: 100%;
     box-sizing: border-box;
 }
 
+.carousel-item {
+    min-width: 25%;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+}
+
 .carousel-item img {
-    max-width: 100%;
+    max-width: 90%;
     height: auto;
     border-radius: 8px;
     margin-bottom: 10px;
+    margin: 0 auto;
 }
 
 .carousel-item h3 {
     margin: 0;
-    font-size: 1.2em;
+    font-size: 1em;
     color: #333;
 }
 
@@ -75,7 +88,7 @@
     }
 
     .carousel-item h3 {
-        font-size: 1em;
+        font-size: 0.9em;
     }
 
     .carousel-button {

@@ -18,8 +18,11 @@ const Homepage = () => {
 
     return (
         <>
+        <body>
+            
             <Header />
             <LatestReleases/>
+        </body>
         </>
     )
 }
