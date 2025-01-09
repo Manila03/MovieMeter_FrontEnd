@@ -1,0 +1,13 @@
+body {
+    margin: 0; /* Elimina márgenes por defecto del body */
+    padding: 0; /* Elimina paddings por defecto */
+    font-family: 'Arial', sans-serif; /* Define una fuente legible */
+    background-color: #f4f4f9; /* Color de fondo claro y agradable */
+    color: #333; /* Color de texto legible */
+    min-height: 100vh; /* Asegura que siempre tenga al menos el alto de la ventana */
+    display: flex;
+    flex-direction: column; /* Organiza el contenido en columnas */
+    align-items: center; /* Centra horizontalmente el contenido */
+    justify-content: flex-start; /* Empuja el contenido hacia la parte superior */
+    box-sizing: border-box; /* Incluye paddings y bordes en el cálculo de ancho y alto */
+}
